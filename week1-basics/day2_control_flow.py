@@ -173,6 +173,48 @@ print (f"\n🎯 Total learning time: {total_weeks} weeks")
 print(f"    That's {total_weeks * 15} hours of dedicated learning in this exciting journey to become an ML Engineer!")
 print()
 print("=" * 50)
+
+
+print("\nCareer Journey:")
+milestones = {
+    1990: "Started in Accounting/Finance",
+    1995: "Mentored by Bechtel engineers",
+    2004: "Founded Hurlbert Consulting Group",
+    2013: "Enterprise software engineering",
+    2022: "Solutions Architect as Sprouts",
+    2026: "Transition to ML/AI"
+}
+for year, milestone in milestones.items():
+    print(f"  - {year}: {milestone}")
+
+#Experiment 2: Calcuate a learning velocity
+print("\nLearning Velocity Calculation:")
+days_completed = 2
+total_days = 84 #12 weeks
+percent_complete = (days_completed/total_days) * 100
+print(f"    Days completed: {days_completed}/{total_days} ({percent_complete:.2f}%)")
+print(f"    Progress:{percent_complete:.1f}%")
+print(f"    Days remaining: {total_days - days_completed}")
+
+skills_learned = []
+if percent_complete < 10:
+    print("Status: Just getting started! 🌱")
+elif percent_complete < 50:
+    print("Status: Making solid progress! 🚀")
+elif percent_complete < 75:
+    print("Status: Over halfway there! 🎉")
+
+# Experiment 3: Track skills learned each week
+for week in range(1,5):
+    if week == 1:
+        skills_learned.append("Python basics")
+    elif week == 2:
+        skills_learned.append("NumPy and Pandas")
+    elif week == 3:
+        skills_learned.append("Neural Networks")
+    elif week == 4:
+        skills_learned.append("PyTorch")
+
+print(f"    Week {week}: {', '.join(skills_learned)}")
 print("🎉 Day 2 Complete! 🚀")
 print("=" * 50)
-
